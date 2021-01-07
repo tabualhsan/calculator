@@ -1,0 +1,507 @@
+
+                vagrant@vagrant:~/src$ C:/Users/tabua/AppData/Local/Programs/Python/Python38-32/python.exe /home/vagrant/src/calculator-1/calculator.py
+bash: C:/Users/tabua/AppData/Local/Programs/Python/Python38-32/python.exe: No such file or directory
+vagrant@vagrant:~/src$ python3 calculator.py
+python3: can't open file 'calculator.py': [Errno 2] No such file or directory
+vagrant@vagrant:~/src$ python3 calculator.py
+python3: can't open file 'calculator.py': [Errno 2] No such file or directory
+vagrant@vagrant:~/src$ calculator.py
+bash: calculator.py: command not found
+vagrant@vagrant:~/src$ calculator
+bash: calculator: command not found
+vagrant@vagrant:~/src$ git status
+fatal: not a git repository (or any parent up to mount point /home/vagrant)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+vagrant@vagrant:~/src$ python3 calculator.py
+python3: can't open file 'calculator.py': [Errno 2] No such file or directory
+vagrant@vagrant:~/src$ git add calculator.py
+fatal: not a git repository (or any parent up to mount point /home/vagrant)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+vagrant@vagrant:~/src$ git add calcualtor-1
+fatal: not a git repository (or any parent up to mount point /home/vagrant)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+vagrant@vagrant:~/src$ hbget calcualtor-1
+Traceback (most recent call last):
+  File "/usr/local/bin/hbget", line 69, in <module>
+    remotezip = urllib.request.urlopen(url)
+  File "/usr/lib/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.6/urllib/request.py", line 532, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.6/urllib/request.py", line 642, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.6/urllib/request.py", line 570, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.6/urllib/request.py", line 504, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.6/urllib/request.py", line 650, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/hbget", line 72, in <module>
+    contents = urllib.request.urlopen(args.url + 'contents')
+  File "/usr/lib/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.6/urllib/request.py", line 532, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.6/urllib/request.py", line 642, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python3.6/urllib/request.py", line 570, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.6/urllib/request.py", line 504, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.6/urllib/request.py", line 650, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+vagrant@vagrant:~/src$ ls
+'~'   calculator-1   intro-to-ubermelon
+vagrant@vagrant:~/src$ cd calcualator-1
+bash: cd: calcualator-1: No such file or directory
+vagrant@vagrant:~/src$ cd calculator-1/
+vagrant@vagrant:~/src/calculator-1$ ls
+arithmetic.py  calculator.py  __pycache__
+vagrant@vagrant:~/src/calculator-1$ python3 calculator.py 
+Enter your equation > echo hi
+Those aren't numbers!
+Enter your equation > echo 5  
+Please enter an operator followed by two integers.
+Enter your equation > ^CTraceback (most recent call last):
+  File "calculator.py", line 7, in <module>
+    user_input = input("Enter your equation > ")
+KeyboardInterrupt
+vagrant@vagrant:~/src/calculator-1$ ^C
+vagrant@vagrant:~/src/calculator-1$ 
+vagrant@vagrant:~/src/calculator-1$ python3 calculator.py
+Enter your equation > git init
+Those aren't numbers!
+Enter your equation > ^CTraceback (most recent call last):
+  File "calculator.py", line 7, in <module>
+    user_input = input("Enter your equation > ")
+KeyboardInterrupt
+vagrant@vagrant:~/src/calculator-1$ git init
+warning: unable to unlink '/home/vagrant/src/calculator-1/.git/config.lock': Text file busy
+error: could not write config file /home/vagrant/src/calculator-1/.git/config: Text file busy
+fatal: could not set 'core.filemode' to 'false'
+vagrant@vagrant:~/src/calculator-1$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   arithmetic.py
+        new file:   calculator.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        __pycache__/
+
+vagrant@vagrant:~/src/calculator-1$ git commit -m "first commit"
+[master (root-commit) 626f480] first commit
+ Committer: vagrant <vagrant@vagrant.vm>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 110 insertions(+)
+ create mode 100644 arithmetic.py
+ create mode 100644 calculator.py
+vagrant@vagrant:~/src/calculator-1$ get branch
+bash: get: command not found
+vagrant@vagrant:~/src/calculator-1$ git branch
+* master
+vagrant@vagrant:~/src/calculator-1$ git remote add origin https://github.com/tabualhsan/calculator-1.git
+error: could not lock config file .git/config: File exists
+fatal: could not set 'remote.origin.url' to 'https://github.com/tabualhsan/calculator-1.git'
+vagrant@vagrant:~/src/calculator-1$ ls
+arithmetic.py  calculator.py  __pycache__
+vagrant@vagrant:~/src/calculator-1$ cd __pycache__/
+vagrant@vagrant:~/src/calculator-1/__pycache__$ ls
+arithmetic.cpython-36.pyc
+vagrant@vagrant:~/src/calculator-1/__pycache__$ cd ..
+vagrant@vagrant:~/src/calculator-1$ cd ..
+vagrant@vagrant:~/src$ git status
+fatal: not a git repository (or any parent up to mount point /home/vagrant)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+vagrant@vagrant:~/src$ history
+    1  clear && echo 0 > "/home/vagrant/.vscode-server/extensions/ms-vsliveshare.vsliveshare-1.0.3375/out/terminal-exit-code-296432" && "/bin/bash"  "/home/vagrant/.vscode-server/extensions/ms-vsliveshare.vsliveshare-1.0.3375/out/deps/linux-prereqs.sh" || echo $? > "/home/vagrant/.vscode-server/extensions/ms-vsliveshare.vsliveshare-1.0.3375/out/terminal-exit-code-296432" && exit 0
+    2  process.py
+    3  pwd
+    4  intro-to-ubermelon
+    5  clear && echo 0 > "/home/vagrant/.vscode-server/extensions/ms-vsliveshare.vsliveshare-1.0.3375/out/terminal-exit-code-380935" && "/bin/bash"  "/home/vagrant/.vscode-server/extensions/ms-vsliveshare.vsliveshare-1.0.3375/node_modules/@vsliveshare/vscode-launcher-linux/install.sh" "/home/vagrant/.vsliveshare/codepath.json" "/home/vagrant/.vsliveshare" "/usr/local/share/applications" "true" || echo $? > "/home/vagrant/.vscode-server/extensions/ms-vsliveshare.vsliveshare-1.0.3375/out/terminal-exit-code-380935" && exit 0
+    6  C:/Users/tabua/AppData/Local/Programs/Python/Python38-32/python.exe /home/vagrant/src/calculator-1/calculator.py
+    7  python3 calculator.py
+    8  calculator.py
+    9  calculator
+   10  git status
+   11  python3 calculator.py
+   12  git add calculator.py
+   13  git add calcualtor-1
+   14  hbget calcualtor-1
+   15  ls
+   16  cd calcualator-1
+   17  cd calculator-1/
+   18  ls
+   19  python3 calculator.py 
+   20  python3 calculator.py
+   21  git init
+   22  git status
+   23  git commit -m "first commit"
+   24  get branch
+   25  git branch
+   26  git remote add origin https://github.com/tabualhsan/calculator-1.git
+   27  ls
+   28  cd __pycache__/
+   29  ls
+   30  cd ..
+   31  git status
+   32  history
+vagrant@vagrant:~/src$ python3 calculator.py
+python3: can't open file 'calculator.py': [Errno 2] No such file or directory
+vagrant@vagrant:~/src$ python3 calculator.py
+python3: can't open file 'calculator.py': [Errno 2] No such file or directory
+vagrant@vagrant:~/src$ ls
+'~'   calculator-1   intro-to-ubermelon
+vagrant@vagrant:~/src$ cd calculator-1
+vagrant@vagrant:~/src/calculator-1$ ls
+arithmetic.py  calculator.py  __pycache__
+vagrant@vagrant:~/src/calculator-1$ python3 calculator.py
+Enter your equation > +1 2
+Please enter an operator followed by two integers.
+Enter your equation > 10
+Not enough inputs.
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > - 10 5
+None
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2 
+10
+Enter your equation > + 1 2 
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > 
+Not enough inputs.
+Enter your equation > + 2 4
+10
+Enter your equation > + 1 3
+10
+Enter your equation > -11
+Not enough inputs.
+Enter your equation > -1
+Not enough inputs.
+Enter your equation > 1 +1
+Those aren't numbers!
+Enter your equation > + 1 1
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > + 1 2
+10
+Enter your equation > ^CTraceback (most recent call last):
+  File "calculator.py", line 7, in <module>
+    user_input = input("Enter your equation > ")
+KeyboardInterrupt
+vagrant@vagrant:~/src/calculator-1$ ^C
+vagrant@vagrant:~/src/calculator-1$ python3 calculator.py
+Enter your equation > + 1 2
+3.0
+Enter your equation > - 10 5
+None
+Enter your equation > ^CTraceback (most recent call last):
+  File "calculator.py", line 7, in <module>
+    user_input = input("Enter your equation > ")
+KeyboardInterrupt
+vagrant@vagrant:~/src/calculator-1$ python3 calculator.py
+Enter your equation > - 10 5
+5.0
+Enter your equation > ^CTraceback (most recent call last):
+  File "calculator.py", line 7, in <module>
+    user_input = input("Enter your equation > ")
+KeyboardInterrupt
+vagrant@vagrant:~/src/calculator-1$ git c git: 'c' is not a git command. See 'git --help'.
+
+The most similar commands are
+        checkout
+        clone
+        commit
+        gc
+vagrant@vagrant:~/src/calculator-1$ 
+vagrant@vagrant:~/src/calculator-1$ git   usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+vagrant@vagrant:~/src/calculator-1$ git commit -am "Completed add function"
+[master 287e7e1] Completed add function
+ Committer: vagrant <vagrant@vagrant.vm>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 8 insertions(+), 11 deletions(-)
+vagrant@vagrant:~/src/calculator-1$ git   usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+vagrant@vagrant:~/src/calculator-1$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+vagrant@vagrant:~/src/calculator-1$ git add arithemtic.py
+fatal: pathspec 'arithemtic.py' did not match any files
+vagrant@vagrant:~/src/calculator-1$ git add arithmetic.py
+vagrant@vagrant:~/src/calculator-1$ git commit -am "completed add function"
+On branch master
+Untracked files:
+        __pycache__/
+
+nothing added to commit but untracked files present
+vagrant@vagrant:~/src/calculator-1$ git s git: 's' is not a git command. See 'git --help'.
+
+The most similar commands are
+        show
+        status
+        am
+        fsck
+        gc
+        mv
+        push
+        rm
+vagrant@vagrant:~/src/calculator-1$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        __pycache__/
+
+nothing added to commit but untracked files present (use "git add" to track)
+vagrant@vagrant:~/src/calculator-1$ git commit -a -m "completed add function"
+On branch master
+Untracked files:
+        __pycache__/
+
+nothing added to commit but untracked files present
+vagrant@vagrant:~/src/calculator-1$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        __pycache__/
+
+nothing added to commit but untracked files present (use "git add" to track)
+vagrant@vagrant:~/src/calculator-1$ https://github.com/tabualhsan/calculator-1.g^C  vagrant@vagrant:~/src/calculator-1$ git add arithmetic.py
+vagrant@vagrant:~/src/calculator-1$ git commit -am "completed add function"
+On branch master
+Untracked files:
+        __pycache__/
+
+nothing added to commit but untracked files present
+vagrant@vagrant:~/src/calculator-1$ git add arithmetic.py
+vagrant@vagrant:~/src/calculator-1$ git commit -am "completed add functiom"
+On branch master
+nothing to commit, working tree clean
+vagrant@vagrant:~/src/calculator-1$ git remote add origin https://github.com/tabualhsan/calculator-1.git
+error: could not lock config file .git/config: File exists
+fatal: could not set 'remote.origin.url' to 'https://github.com/tabualhsan/calculator-1.git'
+vagrant@vagrant:~/src/calculator-1$ git commit
+On branch master
+Changes not staged for commit:
+        modified:   arithmetic.py
+
+no changes added to commit
+vagrant@vagrant:~/src/calculator-1$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+vagrant@vagrant:~/src/calculator-1$ git push https://github.com/michellecve/calculator-1.git
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream https://github.com/michellecve/calculator-1.git master
+
+vagrant@vagrant:~/src/calculator-1$ git commit https://github.com/michellecve/calculator-1.git
+error: pathspec 'https://github.com/michellecve/calculator-1.git' did not match any file(s) known to git.
+vagrant@vagrant:~/src/calculator-1$ git remote add origin https://github.com/tabualhsan/calculator-1.git
+error: could not lock config file .git/config: File exists
+fatal: could not set 'remote.origin.url' to 'https://github.com/tabualhsan/calculator-1.git'
+vagrant@vagrant:~/src/calculator-1$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+vagrant@vagrant:~/src/calculator-1$ ^C
+vagrant@vagrant:~/src/calculator-1$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   arithmetic.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vagrant@vagrant:~/src/calculator-1$ git remote
+vagrant@vagrant:~/src/calculator-1$ git remote -v
+vagrant@vagrant:~/src/calculator-1$ git push origin master^C
+vagrant@vagrant:~/src/calculator-1$ cd ~
+vagrant@vagrant:~$ ls -a
+.   +              .bash_logout  .cache  .gnupg  .profile  .ssh                       .vbox_version   .vsliveshare
+..  .bash_history  .bashrc       .git    .local  src       .sudo_as_admin_successful  .vscode-server  .wget-hsts
+vagrant@vagrant:~$ cd source
+bash: cd: source: No such file or directory
+vagrant@vagrant:~$ cd src
+vagrant@vagrant:~/src$ cd calculator-1
+vagrant@vagrant:~/src/calculator-1$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   arithmetic.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+vagrant@vagrant:~/src/calculator-1$ 
